@@ -378,6 +378,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c184358e395fb3a4da1d5351fb800620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  status0: {fileID: 443458117}
+  status1: {fileID: 1041511962}
+  status2: {fileID: 1677120603}
+  status3: {fileID: 2131406801}
+  status4: {fileID: 582012368}
+  status5: {fileID: 1555051006}
 --- !u!114 &352890516
 MonoBehaviour:
   m_ObjectHideFlags: 0

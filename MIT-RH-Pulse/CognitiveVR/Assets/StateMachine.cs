@@ -64,18 +64,22 @@ public class StateMachine : MonoBehaviour
             case 0: 
                 status++;
                 Debug.Log("stage 1 Start walking for calibration");
+                enablee(status1);
                 break;
             case 2:
                 status++;
                 Debug.Log("stage 3 Assessment init");
+                enablee(status3);
                 break;
             case 3:
                 status++;
                 Debug.Log("stage 4 Start walking for assessment");
+                enablee(status4);
                 break;
             case 5:
                 status = 0;
                 Debug.Log("stage 0 Init assessment");
+                enablee(status0);
                 break;
             default:
                 break;
@@ -88,6 +92,7 @@ public class StateMachine : MonoBehaviour
             return;
         status++;
         Debug.Log("stage 2 Calib completed");
+        enablee(status2);
     }
 
     internal void triggerAssessCollision()
@@ -96,5 +101,6 @@ public class StateMachine : MonoBehaviour
             return;
         status++;
         Debug.Log("stage 5 assessment completed");
+        enablee(status5);
     }
 }
