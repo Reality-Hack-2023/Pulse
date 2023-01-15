@@ -26,6 +26,7 @@ public class CommunicationManager : MonoBehaviour
         //if(Input.GetKeyDown(KeyCode.L))
         if(OVRInput.GetDown(OVRInput.Button.One))
         {
+            TriggerState();
             DebugLog("Getting started");
             //ConnectandGet();
             singularityManager.sendMessage("start-hr", pairedDevices[0]);

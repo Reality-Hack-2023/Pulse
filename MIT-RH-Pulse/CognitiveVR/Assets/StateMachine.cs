@@ -6,7 +6,12 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public GameObject status0;
+    public GameObject status1;
+    public GameObject status2;
+    public GameObject status3;
+    public GameObject status4;
+    public GameObject status5;
     int status = 0;
 
     /**
@@ -25,6 +30,21 @@ public class StateMachine : MonoBehaviour
      * status = 6 which is 0
      * 
      */
+
+    void disableall()
+    {
+        status0.SetActive(false);
+        status1.SetActive(false);
+        status2.SetActive(false);
+        status3.SetActive(false);
+        status4.SetActive(false);
+        status5.SetActive(false);
+    }
+
+    void enablee(GameObject go)
+    {
+        go.SetActive(true);
+    }
 
     void Start()
     {
