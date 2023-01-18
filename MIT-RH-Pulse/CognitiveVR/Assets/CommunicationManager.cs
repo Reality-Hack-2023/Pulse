@@ -31,10 +31,18 @@ public class CommunicationManager : MonoBehaviour
             //ConnectandGet();
             singularityManager.sendMessage("start-hr", pairedDevices[0]);
         }
+
+
         if (OVRInput.GetDown(OVRInput.Button.Two))
         {
+            stateMachine.triggerCalibCollision();
             DebugLog("Getting stopped");
             singularityManager.sendMessage("stop-hr", pairedDevices[0]);
+        }
+
+        if(OVRInput.GetDown(OVRInput.Button.Three))
+        {
+            stateMachine.triggerAssessCollision();
         }
 
         if(Input.GetKeyDown(KeyCode.F))
@@ -83,12 +91,13 @@ public class CommunicationManager : MonoBehaviour
     public void OnCC(string message)
     {
         DebugLog("Message recieved from deviceeeeee: " + message);
+        Displaymessage(message);
     }
 
     public void onMessageRecieved(string message)
     {
         DebugLog("Message recieved from device: " + message);
-        Displaymessage(message);
+        
 
         if(message=="switch")
         {
